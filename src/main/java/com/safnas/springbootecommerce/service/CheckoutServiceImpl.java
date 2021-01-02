@@ -49,6 +49,11 @@ public class CheckoutServiceImpl implements CheckoutService{
         return new PurchaseResponse(orderTrackingNumber);
     }
 
+    @Override
+    public Customer getOrder(String email) {
+        return customerRepository.findByEmail(email);
+    }
+
     private String generateOrderTrackingNumber() {
 
         //generate a random UUID
