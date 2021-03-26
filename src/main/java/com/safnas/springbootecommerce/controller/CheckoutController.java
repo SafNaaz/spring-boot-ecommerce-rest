@@ -22,12 +22,12 @@ public class CheckoutController {
         return purchaseResponse;
     }
 
-    @GetMapping("/orders/{email}")
+    /*@GetMapping("/orders/{email}")
     @ResponseBody
     public Customer getOrderInfo(@PathVariable String email){
 
         Customer customer = checkoutService.getOrder(email);
 
         return customer;
-    }
+    }*/
 }
