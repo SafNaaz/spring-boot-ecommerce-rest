@@ -1,9 +1,6 @@
 package com.safnas.springbootecommerce.config;
 
-import com.safnas.springbootecommerce.entity.Country;
-import com.safnas.springbootecommerce.entity.Product;
-import com.safnas.springbootecommerce.entity.ProductCategory;
-import com.safnas.springbootecommerce.entity.State;
+import com.safnas.springbootecommerce.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -37,6 +34,7 @@ public class MyDataRestConfig implements RepositoryRestConfigurer {
         disableHttpMethods(ProductCategory.class, config, theUnsupportedActions);
         disableHttpMethods(Country.class, config, theUnsupportedActions);
         disableHttpMethods(State.class, config, theUnsupportedActions);
+        disableHttpMethods(Order.class, config, theUnsupportedActions);
 
         // call an unternal helper methid
         exposeIds(config);
